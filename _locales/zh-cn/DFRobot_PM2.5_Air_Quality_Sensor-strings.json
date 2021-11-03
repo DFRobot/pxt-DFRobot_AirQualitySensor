@@ -1,0 +1,11 @@
+{
+    "custom.readVersion|block":"获取版本",
+    "custom.gainParticleConcentration_ugm3|block":"读取 %type 环境下 %eOption 颗粒物浓度（ug/m3）",
+    "custom.particleNumber|block":"读取每0.1L空气中粒径为 %eOption 的颗粒物个数",
+    "custom|block":"空气质量传感器",
+    "custom.setAddr|block":"初始化设备直到成功 I2C地址为%addr",
+    "MyType.STANDARD|block":"标准颗粒物",
+    "MyType.ATMOSPHERE|block":"大气"
+
+    
+}
