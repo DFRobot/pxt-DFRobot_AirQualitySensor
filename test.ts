@@ -2,7 +2,7 @@
 custom.setAddr(MyAddr.ADDR)
 basic.forever(function () {
     serial.writeValue("x", custom.particleNumber(MyEnum1.UM10))
-    serial.writeValue("y", custom.gainParticleConcentration_ugm3(MyType.STANDARD, MyEnum.PM1_0))
-    serial.writeValue("z", custom.gainParticleConcentration_ugm3(MyType.STANDARD, MyEnum.PM1_0))
+    serial.writeValue("y", custom.gainParticleConcentration_ugm3(MyEnum.PM1_0, MyType.STANDARD))
+    serial.writeValue("z", custom.gainParticleConcentration_ugm3(MyEnum.PM1_0,MyType.STANDARD))
     basic.pause(100)
 })

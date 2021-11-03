@@ -1,9 +1,4 @@
 
-/**
- * 使用此文件来定义自定义函数和图形块。
- * 想了解更详细的信息，请前往 https://makecode.microbit.org/blocks/custom
- */
-
 enum MyEnum {
     //% block="PM1.0"
     PM1_0=0,
@@ -13,9 +8,9 @@ enum MyEnum {
     PM10=2,
 }
 enum MyType{
-    //% block="standard"
+    //% block="standard particles"
     STANDARD=0,
-    //% block="atmosphere"
+    //% block="atmospheric environment"
     ATMOSPHERE = 1,
 }
 enum MyEnum1 {
@@ -48,7 +43,7 @@ namespace custom {
      * TODO:设置I2C地址
      * @param addr I2C地址 
      */
-    //% block="set I2C addr %addr"
+    //% block="Initialize device until success  set I2C addr %addr"
     //% weight=98
     export function setAddr(eAddr: MyAddr){
         I2CAddr = eAddr;
@@ -57,9 +52,9 @@ namespace custom {
      * TODO: 获取指定颗粒物大小
      * @param eOption 获取数据选项
      */
-    //% block="read %type %eOption particulate matter concentration in the environment(ug/m3)"
+    //% block="read %eOption concentration in %eType (ug/m3)"
     //% weight=96
-    export function gainParticleConcentration_ugm3(eType:MyType, eOption: MyEnum): number {
+    export function gainParticleConcentration_ugm3(eOption: MyEnum, eType:MyType): number {
         let data;
         let buffer;
         if (eType == MyType.STANDARD){
@@ -100,7 +95,7 @@ namespace custom {
      * TODO: 获取在0.1升空气中的颗粒物的个数
      * @param eOption 获取数据选项
      */
-    //% block="Read the number of particles with particle size of air as %eOption per 0.1L of air"
+    //% block="read the number of particles with size of %eOption in 0.1L volume of air"
     //% weight=95
     export function particleNumber(eOption: MyEnum1): number {
         let data;
@@ -135,7 +130,7 @@ namespace custom {
      /**
      * TODO: 获取版本
      */
-    //% block="read version"
+    //% block="get version"
     //% weight=93
     export function readVersion(): number {
         let buffer = readReg(PARTICLENUM_GAIN_VERSION,1);
