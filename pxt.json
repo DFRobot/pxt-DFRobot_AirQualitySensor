@@ -1,6 +1,6 @@
 {
     "name": "DFRobot_PM2.5_Air_Quality_Sensor",
-    "version": "0.0.5",
+    "version": "0.1.0",
     "description": "",
     "dependencies": {
         "core": "*",
